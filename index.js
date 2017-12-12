@@ -26,10 +26,6 @@ function load_map_tiles(token){
     ).addTo(mymap);
 }
 
-function load_instagram_pictures(token){
-    L.instagram('https://api.instagram.com/v1/users/5704639144/media/recent?count=33&access_token=' + token).addTo(mymap);
-}
-
 var mymap = L.map('mapid').setView([38.752678, -9.184681], 3);
 retrieveToken('access-token-mapbox.txt', load_map_tiles);
-retrieveToken('access-token-instagram.txt', load_instagram_pictures);
+L.instagram('assets/to.colante/to.colante.json').addTo(mymap);
