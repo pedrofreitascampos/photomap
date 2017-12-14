@@ -1,7 +1,7 @@
 /* Marker */
 .leaflet-marker-instagram { 
-	border: 1.5px solid #fff;
-	box-shadow: 1px 1px 3px #888;
+	border: 2px solid red;
+	box-shadow: 1px 1px 1px black;
 	border-radius: 10px;
 }	
 
@@ -9,17 +9,17 @@
 .leaflet-popup-instagram a.leaflet-popup-close-button {
 	top: 0px;
 	right: -13px;
-	background-color: #fff;
+	background-color: white;
 	padding: 5px;
 	border-radius: 12px;
 	width: 15px;
 	height: 15px;
-	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
-	color: #555;	
+	box-shadow: 0 3px 14px white;
+	color: red;
 }
 .leaflet-popup-instagram a.leaflet-popup-close-button:hover {
-	color: #333;
-	background-color: #eee;
+	color: black;
+	background-color: red;
 }
 .leaflet-popup-instagram .leaflet-popup-content-wrapper { 
 	padding: 0 0 1px 0;
