@@ -1,12 +1,16 @@
-faq_html = "<div id='faq' style='overflow:scroll' onclick=unShowFaq()><img src='assets/img/sejaondefor.jpg' width='100%' height='40%'><br><br><div class='question'><b>O que é o <a href=3D'http://sejaondefor.com'>sejaondefor.com</a>?</b></div>" +
+// Requires that leaflet and leaflet.instagram are loaded on global "L"
+
+faq_html = "<div id='faq' style='overflow-y:scroll' onclick=unShowFaq()><img src='assets/img/sejaondefor.jpg' " +
+    "width='100%' height='40%'><br><br>" +
+    "<div class='question'>O que é o <a href='http://www.sejaondefor.com'>sejaondefor.com</a>?</div>" +
     "<div><br></div>" +
-    "<div>O <a href=3D'http://sejaondefor.com'>sejaondefor.com</a> é o mostruário ou expositor do " +
+    "<div>O <a href='http://www.sejaondefor.com'>sejaondefor.com</a> é o mostruário ou expositor do " +
     "<a href='https://www.instagram.com/to.colante/'>to.colante</a> fornecendo a localização em mapa dos inúmeros" +
     " to.colantes que têm vindo a ser espalhados desde 2015." +
     "</div>" +
     "<div><br>" +
     "</div>" +
-    "<div class='question'><b>Já agora o que é o to.colante?</b></div>" +
+    "<div class='question'>Já agora o que é o to.colante?</div>" +
     "<div>" +
     "<br></div>" +
     "<div>O Benfica nasceu em Lisboa e desde sempre esteve aberto ao mundo. " +
@@ -23,7 +27,7 @@ faq_html = "<div id='faq' style='overflow:scroll' onclick=unShowFaq()><img src='
     "modo digital, difundimos algumas das colagens já efectuadas." +
     "</div>" +
     "<div><br></div>" +
-    "<div class='question'><b>Ok ok...já percebi esse blá blá. Onde posso arranjar to.colantes?</b>" +
+    "<div class='question'>Ok ok...já percebi esse blá blá. Onde posso arranjar to.colantes?" +
     "</div>" +
     "<div><br></div>" +
     "<div>Bom...de certeza que não os encontrarás numa loja. Mas na Luz, em dia de jogo, com certeza irás " +
@@ -35,8 +39,8 @@ faq_html = "<div id='faq' style='overflow:scroll' onclick=unShowFaq()><img src='
     "podes entrar em contacto via mensagem (instagram ou <a href=mailto:info.tocolante@gmail.com'>info.tocolante@gmail.com</a>)." +
     "</div>" +
     "<div><br></div>" +
-    "<div class='question'><b>Como posso ter to.colantes cola" +
-    "   dos por mim publicados aqui na página?</b>" +
+    "<div class='question'>Como posso ter to.colantes cola" +
+    "   dos por mim publicados aqui na página?" +
     "</div>" +
     "<div><br></div>" +
     "<div>" +
@@ -49,14 +53,13 @@ faq_html = "<div id='faq' style='overflow:scroll' onclick=unShowFaq()><img src='
     "fotos era igualmente simpático. :)" +
     "</div>" +
     "<div><br></div>" +
-    "<div class='question'><b>Existe mesmo um Tó?</b></div>" +
+    "<div class='question'>Existe mesmo um Tó?</div>" +
     "   <div><br></div>" +
     "   <div>Sim e com o nome completo António José Conceição Oliveira " +
     "- mais conhecido por Toni. E para quem escreve estas linhas, " +
     "   é um dos Senhores Benfica. Mística no seu estado mais puro." +
     "</div></div>"
 
-// Requires that leaflet and leaflet.instagram are loaded on global "L"
 function retrieveToken(tokenFile, callback){
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", tokenFile, true);
@@ -92,22 +95,13 @@ function changeIconSize(e) {
 
 function sizeFactor(zoom) {
     if (zoom < 6) return 3;
-    else if (zoom >= 6 && zoom < 10) return 20;
-    else if (zoom >= 10) return 35;
+    else if (zoom >= 6 && zoom < 10) return 13;
+    else if (zoom >= 10) return 25;
 }
 
-var benfica_light = "https://api.mapbox.com/styles/v1/pedcampo/cjb56118t1bxu2rmsdu2pblnn/tiles/256/{z}/{x}/{y}";
-var benfica_banner = "https://api.mapbox.com/styles/v1/pedcampo/cjb6orkxz2sqf2spxmw3p3a8r/tiles/256/{z}/{x}/{y}";
-var benfica_odyssey = "https://api.mapbox.com/styles/v1/pedcampo/cjb537i4219g02smqopxgpsx4/tiles/256/{z}/{x}/{y}";
-var benfica_dark = "https://api.mapbox.com/styles/v1/pedcampo/cjb54jtel1agr2qr016zkyn84/tiles/256/{z}/{x}/{y}";
-var moonlight = "https://api.mapbox.com/styles/v1/pedcampo/cjb546hdy1abz2rpmyzjz5ds6/tiles/256/{z}/{x}/{y}";
-var odyssey = "https://api.mapbox.com/styles/v1/pedcampo/cjb5468hw1abf2sp6t4oj6890/tiles/256/{z}/{x}/{y}";
-var vintage = "https://api.mapbox.com/styles/v1/pedcampo/cjb5465qa1abu2qmyhh4aijm4/tiles/256/{z}/{x}/{y}";
-var style = moonlight;
 
 function load_map_tiles(token){
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    //L.tileLayer(style + '?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
         maxZoom: 18,
         id: 'mapbox.pencil',
@@ -133,6 +127,7 @@ function unShowFaq() {
 }
 
 var mymap = L.map('mapid').setView([38.752678, -9.184681], 3);
+mymap.options.minZoom = 3;
 retrieveToken('access-token-mapbox.txt', load_map_tiles);
 L.instagram('assets/db/to.colante.json').addTo(mymap);
 
