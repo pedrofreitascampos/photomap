@@ -91,9 +91,9 @@ function changeIconSize(e) {
 }
 
 function sizeFactor(zoom) {
-    if (zoom < 6) return 1;
-    else if (zoom >= 6 && zoom < 10) return 10;
-    else if (zoom >= 10) return 25;
+    if (zoom < 6) return 3;
+    else if (zoom >= 6 && zoom < 10) return 20;
+    else if (zoom >= 10) return 35;
 }
 
 var benfica_light = "https://api.mapbox.com/styles/v1/pedcampo/cjb56118t1bxu2rmsdu2pblnn/tiles/256/{z}/{x}/{y}";
@@ -118,8 +118,6 @@ function load_map_tiles(token){
 
 function showFaq() {
     var el = document.createElement('faq');
-    //el.setAttribute('id', 'ifrm');
-    //el.setAttribute('src', 'faq.html');
     el.innerHTML = faq_html;
     document.body.appendChild(el);
     el = document.getElementById('faq_button');
@@ -136,7 +134,7 @@ function unShowFaq() {
 
 var mymap = L.map('mapid').setView([38.752678, -9.184681], 3);
 retrieveToken('access-token-mapbox.txt', load_map_tiles);
-L.instagram('assets/to.colante/to.colante.json').addTo(mymap);
+L.instagram('assets/db/to.colante.json').addTo(mymap);
 
 mymap.on('zoomend', function(){
     mymap.eachLayer(function (layer){

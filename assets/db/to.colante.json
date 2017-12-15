@@ -13958,5 +13958,362 @@
     "thumbnail_src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/19932024_1895571467347554_5344343255133716480_n.jpg",
     "is_video": false,
     "id": "1553743920142675047"
+  },
+  {
+    "edge_media_preview_like": {
+      "count": 5
+    },
+    "edge_media_to_caption": {
+      "edges": []
+    },
+    "dimensions": {
+      "width": 1080,
+      "height": 1080
+    },
+    "display_url": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s1080x1080/e15/fr/19932024_1895571467347554_5344343255133716480_n.jpg",
+    "edge_media_to_comment": {
+      "count": 0
+    },
+    "comments_disabled": false,
+    "__typename": "GraphImage",
+    "thumbnail_resources": [
+      {
+        "config_height": 150,
+        "config_width": 150,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s150x150/e15/19932024_1895571467347554_5344343255133716480_n.jpg"
+      },
+      {
+        "config_height": 240,
+        "config_width": 240,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s240x240/e15/19932024_1895571467347554_5344343255133716480_n.jpg"
+      },
+      {
+        "config_height": 320,
+        "config_width": 320,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s320x320/e15/19932024_1895571467347554_5344343255133716480_n.jpg"
+      },
+      {
+        "config_height": 480,
+        "config_width": 480,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s480x480/e15/19932024_1895571467347554_5344343255133716480_n.jpg"
+      },
+      {
+        "config_height": 640,
+        "config_width": 640,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/19932024_1895571467347554_5344343255133716480_n.jpg"
+      }
+    ],
+    "taken_at_timestamp": 1499440730,
+    "location": {
+      "latitude": 38.752215,
+      "longitude": -9.183829
+    },
+    "urls": [
+      "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/e15/fr/19932024_1895571467347554_5344343255133716480_n.jpg"
+    ],
+    "shortcode": "BWQAd0ABuxn",
+    "owner": {
+      "id": "5704639144"
+    },
+    "thumbnail_src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/19932024_1895571467347554_5344343255133716480_n.jpg",
+    "is_video": false,
+    "id": "1553743920142675047"
+  },
+  {
+    "__typename": "GraphImage",
+    "comments_disabled": false,
+    "dimensions": {
+      "height": 1078,
+      "width": 1080
+    },
+    "display_url": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/e35/25012545_132398580764973_7994041011057721344_n.jpg",
+    "edge_media_preview_like": {
+      "count": 60
+    },
+    "edge_media_to_caption": {
+      "edges": [
+        {
+          "node": {
+            "text": "\"He who doesn't die on the battlefield slips in the bathtub\"\n(uruguayan proverb)\n\nNada de escorregar no Rio (Ave)! Sport Colonia del Sacramento e Benfica.\n\n#1904\n#slb\n#slb1904\n#slbenfica\n#benfica\n#sportlisboaebenfica\n#epluribusunum\n#sejaondefor \n#oamordaminhavida\n#avantepeloslb \n#carregabenfica\n#rumoaojamor\n#benficastickers \n#stickersbenfica\n#benficapelomundo\n#benficaworld\n#tocolantedomaior \n#coloniadelsacramento \n#colonia\n#uruguay \n#riodelaplata \n#unescoworldheritage \n#slbenficaflyingsince1904 \n#uruguayanproverbs\n#river\n#sticker\n#stickerart"
+          }
+        }
+      ]
+    },
+    "edge_media_to_comment": {
+      "count": 1
+    },
+    "id": "1668541167694066567",
+    "is_video": false,
+    "location": {
+      "longitude": -57.8339,
+      "latitude": -34.4607,
+      "has_public_page": true,
+      "id": "216161589",
+      "name": "Colonia Del Sacramento, Colonia, Uruguay",
+      "slug": "colonia-del-sacramento-colonia-uruguay"
+    },
+    "owner": {
+      "id": "5704639144"
+    },
+    "shortcode": "Bcn2VoJhTOH",
+    "tags": [
+      "uruguay",
+      "sportlisboaebenfica",
+      "slbenfica",
+      "benficaworld",
+      "rumoaojamor",
+      "slbenficaflyingsince1904",
+      "benfica",
+      "carregabenfica",
+      "river",
+      "sticker",
+      "1904",
+      "slb",
+      "riodelaplata",
+      "unescoworldheritage",
+      "sejaondefor",
+      "stickersbenfica",
+      "tocolantedomaior",
+      "benficapelomundo",
+      "uruguayanproverbs",
+      "avantepeloslb",
+      "benficastickers",
+      "coloniadelsacramento",
+      "stickerart",
+      "oamordaminhavida",
+      "colonia",
+      "slb1904",
+      "epluribusunum"
+    ],
+    "taken_at_timestamp": 1513125628,
+    "thumbnail_resources": [
+      {
+        "config_height": 150,
+        "config_width": 150,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s150x150/e35/c0.0.809.809/25012545_132398580764973_7994041011057721344_n.jpg"
+      },
+      {
+        "config_height": 240,
+        "config_width": 240,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s240x240/e35/c0.0.809.809/25012545_132398580764973_7994041011057721344_n.jpg"
+      },
+      {
+        "config_height": 320,
+        "config_width": 320,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/c0.0.809.809/25012545_132398580764973_7994041011057721344_n.jpg"
+      },
+      {
+        "config_height": 480,
+        "config_width": 480,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s480x480/e35/c0.0.809.809/25012545_132398580764973_7994041011057721344_n.jpg"
+      },
+      {
+        "config_height": 640,
+        "config_width": 640,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.0.809.809/25012545_132398580764973_7994041011057721344_n.jpg"
+      }
+    ],
+    "thumbnail_src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.0.809.809/25012545_132398580764973_7994041011057721344_n.jpg",
+    "urls": [
+      "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/e35/25012545_132398580764973_7994041011057721344_n.jpg"
+    ]
+  },
+  {
+    "__typename": "GraphImage",
+    "comments_disabled": false,
+    "dimensions": {
+      "height": 928,
+      "width": 1080
+    },
+    "display_url": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/e35/25015537_1909245419392117_4663185687078502400_n.jpg",
+    "edge_media_preview_like": {
+      "count": 53
+    },
+    "edge_media_to_caption": {
+      "edges": [
+        {
+          "node": {
+            "text": "Época sinuosa. \nSport WIP e Benfica. \n#1904\n#slb\n#slb1904 \n#slbenfica\n#benfica\n#sportlisboaebenfica \n#epluribusunum \n#sejaondefor \n#avantepeloslb \n#carregabenfica \n#mesmoquepercasojogonãoperdesatuahonra \n#benficastickers \n#stickersbenfica\n#bendicapelomundo\n#benficaworld\n#tocolantedomaior\n#newyork \n#manhattan \n#usa\n#roadworkahead \n#roadsign \n#itaintovertillitsover \n#rockslb \n#rocky\n#stickerbombing\n#sticker\n#stickerart"
+          }
+        }
+      ]
+    },
+    "edge_media_to_comment": {
+      "count": 1
+    },
+    "id": "1669282811238226936",
+    "is_video": false,
+    "location": {
+      "longitude": -73.9626,
+      "latitude": 40.8075,
+      "has_public_page": true,
+      "id": "111186979305197",
+      "name": "Columbia University",
+      "slug": "columbia-university"
+    },
+    "owner": {
+      "id": "5704639144"
+    },
+    "shortcode": "Bcqe99hhRv4",
+    "tags": [
+      "sportlisboaebenfica",
+      "slbenfica",
+      "benficaworld",
+      "benfica",
+      "carregabenfica",
+      "roadworkahead",
+      "sticker",
+      "usa",
+      "1904",
+      "newyork",
+      "stickerbombing",
+      "slb",
+      "sejaondefor",
+      "stickersbenfica",
+      "tocolantedomaior",
+      "avantepeloslb",
+      "rockslb",
+      "benficastickers",
+      "stickerart",
+      "manhattan",
+      "mesmoquepercasojogonãoperdesatuahonra",
+      "roadsign",
+      "rocky",
+      "slb1904",
+      "itaintovertillitsover",
+      "epluribusunum",
+      "bendicapelomundo"
+    ],
+    "taken_at_timestamp": 1513214039,
+    "thumbnail_resources": [
+      {
+        "config_height": 150,
+        "config_width": 150,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s150x150/e35/c72.0.889.889/25015537_1909245419392117_4663185687078502400_n.jpg"
+      },
+      {
+        "config_height": 240,
+        "config_width": 240,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s240x240/e35/c72.0.889.889/25015537_1909245419392117_4663185687078502400_n.jpg"
+      },
+      {
+        "config_height": 320,
+        "config_width": 320,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/c72.0.889.889/25015537_1909245419392117_4663185687078502400_n.jpg"
+      },
+      {
+        "config_height": 480,
+        "config_width": 480,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s480x480/e35/c72.0.889.889/25015537_1909245419392117_4663185687078502400_n.jpg"
+      },
+      {
+        "config_height": 640,
+        "config_width": 640,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c72.0.889.889/25015537_1909245419392117_4663185687078502400_n.jpg"
+      }
+    ],
+    "thumbnail_src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c72.0.889.889/25015537_1909245419392117_4663185687078502400_n.jpg",
+    "urls": [
+      "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/e35/25015537_1909245419392117_4663185687078502400_n.jpg"
+    ]
+  },
+  {
+    "__typename": "GraphImage",
+    "comments_disabled": false,
+    "dimensions": {
+      "height": 750,
+      "width": 750
+    },
+    "display_url": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/e35/25010071_1548653508553336_8612652340475854848_n.jpg",
+    "edge_media_preview_like": {
+      "count": 76
+    },
+    "edge_media_to_caption": {
+      "edges": [
+        {
+          "node": {
+            "text": "\"A situação mais diferente que vivi no Benfica foi à chegada. Já conhecia o clube e quando cheguei dei uma entrevista e falei que ia ser campeão no Benfica. E algumas pessoas falaram:\n- Ó Geovanni, você sabe o que é que você falou? Você falou que ia ser campeão no Benfica mas tem dez anos que o Benfica não vence.\n- Não tem importância, não. Eu vim aqui mesmo para ser campeão. Não retiro o que eu falei, vim para ser campeão.\" (Geovanni in relato.pt)\n\nDito e feito. O homem dos jogos grandes! (aqui com um to.colante dado pelo nosso \"centroavante\" no Brasil @mikinhooooo )\n\nSport Belo Horizonte e Benfica.\n\n#1904\n#slb\n#slb1904\n#slbenfica\n#benfica\n#sportlisboaebenfica\n#epluribusunum\n#sejaondefor\n#avantepeloslb\n#carregabenfica\n#benficalegends\n#benficastickers\n#stickersbenfica\n#benficapelomundo\n#benficaworld\n#tocolantedomaior\n#savassi\n#belohorizonte\n#minasgerais\n#brasil \n#geovanni \n#caçaleões\n#soneca\n#benficastamp\n#relato\n#sticker\n#stickerart"
+          }
+        }
+      ]
+    },
+    "edge_media_to_comment": {
+      "count": 2
+    },
+    "id": "1670002990750550059",
+    "is_video": false,
+    "location": {
+      "longitude": -43.934785,
+      "latitude": -19.936652,
+      "has_public_page": true,
+      "id": "429231414101064",
+      "name": "Savassi",
+      "slug": "savassi"
+    },
+    "owner": {
+      "id": "5704639144"
+    },
+    "shortcode": "BctCt89hsgr",
+    "tags": [
+      "sportlisboaebenfica",
+      "soneca",
+      "slbenfica",
+      "benficaworld",
+      "benfica",
+      "carregabenfica",
+      "sticker",
+      "relato",
+      "savassi",
+      "1904",
+      "slb",
+      "minasgerais",
+      "belohorizonte",
+      "sejaondefor",
+      "stickersbenfica",
+      "geovanni",
+      "tocolantedomaior",
+      "benficapelomundo",
+      "brasil",
+      "avantepeloslb",
+      "caçaleões",
+      "benficastickers",
+      "stickerart",
+      "benficalegends",
+      "benficastamp",
+      "slb1904",
+      "epluribusunum"
+    ],
+    "taken_at_timestamp": 1513299891,
+    "thumbnail_resources": [
+      {
+        "config_height": 150,
+        "config_width": 150,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s150x150/e35/25010071_1548653508553336_8612652340475854848_n.jpg"
+      },
+      {
+        "config_height": 240,
+        "config_width": 240,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s240x240/e35/25010071_1548653508553336_8612652340475854848_n.jpg"
+      },
+      {
+        "config_height": 320,
+        "config_width": 320,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/25010071_1548653508553336_8612652340475854848_n.jpg"
+      },
+      {
+        "config_height": 480,
+        "config_width": 480,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s480x480/e35/25010071_1548653508553336_8612652340475854848_n.jpg"
+      },
+      {
+        "config_height": 640,
+        "config_width": 640,
+        "src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/25010071_1548653508553336_8612652340475854848_n.jpg"
+      }
+    ],
+    "thumbnail_src": "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/25010071_1548653508553336_8612652340475854848_n.jpg",
+    "urls": [
+      "https://instagram.flis5-1.fna.fbcdn.net/t51.2885-15/e35/25010071_1548653508553336_8612652340475854848_n.jpg"
+    ]
   }
 ]
