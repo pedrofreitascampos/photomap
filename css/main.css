@@ -3,11 +3,16 @@ body {
     padding: 0;
 }
 
-#banner {
-    height: 25%;
-    width: 100%;
-    padding: 0;
-    display: block;
+@font-face {
+    font-family: 'hardcore';
+    src:
+            url('../assets/fonts/hardcore_pen_regular.ttf');
+            format('truetype');
+}
+
+.question {
+    font-size: 250%;
+    font-family: hardcore;
 }
 
 #faq_button {
@@ -29,7 +34,6 @@ body {
     font-family: Arial;
     color: red;
     font-size: 100%;
-    //padding: 100px 200px 100px 200px;
     border: solid #000000 2px;
 }
 
@@ -43,31 +47,25 @@ body {
 }
 
 #faq {
-    //background-image: url("../assets/img/tocolante.png");
     background-repeat:no-repeat;
     background-size: 100%;
     background-position: center;
     background-color: white;
     position: fixed;
     z-index: 999;
-    bottom: 2%;
+    bottom: 5%;
     left: 2%;
     width: 60%;
     height: 50%;
     text-align: left;
     vertical-align: center;
     border-radius: 28px;
-    text-shadow: 1px 1px 3px black;
     box-shadow: 1px 1px 3px black;
     font-family: Arial;
     color: black;
     font-size: 70%;
     padding: 10px 20px 10px 20px;
     border: solid #000000 2px;
-}
-
-.question {
-    font-size: 110%;
 }
 
 html, body, #mapid {
