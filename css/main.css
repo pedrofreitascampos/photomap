@@ -10,6 +10,66 @@ body {
     display: block;
 }
 
+#faq_button {
+    background-image: url("../assets/img/tocolante.png");
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: fixed;
+    z-index: 999;
+    bottom: 1%;
+    left: 2%;
+    width: 10%;
+    height: 4%;
+    text-align: center;
+    vertical-align: center;
+    border-radius: 28px;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 3px black;
+    font-family: Arial;
+    color: red;
+    font-size: 100%;
+    //padding: 100px 200px 100px 200px;
+    border: solid #000000 2px;
+}
+
+#faq_button:hover {
+    background-image: url("../assets/img/tocolante.png");
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-color: whitesmoke;
+    border: solid red 3px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+#faq {
+    //background-image: url("../assets/img/tocolante.png");
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    bottom: 2%;
+    left: 2%;
+    width: 60%;
+    height: 50%;
+    text-align: left;
+    vertical-align: center;
+    border-radius: 28px;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 3px black;
+    font-family: Arial;
+    color: black;
+    font-size: 70%;
+    padding: 10px 20px 10px 20px;
+    border: solid #000000 2px;
+}
+
+.question {
+    font-size: 110%;
+}
+
 html, body, #mapid {
     height: 100%;
     width: 100%;
