@@ -56,14 +56,14 @@ body {
     bottom: 5%;
     left: 2%;
     width: 60%;
-    height: 50%;
+    height: 80%;
     text-align: left;
     vertical-align: center;
     border-radius: 28px;
     box-shadow: 1px 1px 3px black;
     font-family: Arial;
     color: black;
-    font-size: 70%;
+    font-size: 80%;
     padding: 10px 20px 10px 20px;
     border: solid #000000 2px;
 }
