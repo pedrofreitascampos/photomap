@@ -2,7 +2,6 @@
 
 faq_html =
     "<div id='faq' style='overflow-y:scroll' onclick=unShowFaq()>" +
-        "<img src='assets/img/sejaondefor.jpg' width='100%' height='40%'>" +
         "<br><br>" +
         "<div class='question'>" +
             "O que é o <a href='http://www.sejaondefor.com'>sejaondefor.com</a>?" +
@@ -60,16 +59,41 @@ faq_html =
             "Conhecer o tipo que gere isto ou alguém que conheça esse tipo e " +
             "pagar-lhe umas cervejas (vide acima onde) é sempre uma boa táctica. " +
             "Caso isso não seja possível (ou não queiras) podes sempre enviar as fotos para " +
-            "<a href=3D'mailto:info.tocolante@gmail.com'>info.tocolante@gmail.com</a> . " +
+            "<a href=3D'mailto:info.tocolante@gmail.com'>info.tocolante@gmail.com</a>. " +
             "Desde que enquadradas na temática, todas as imagens " +
             "são bem vindas (com ou sem cerveja envolvida). Indicar a localização das ditas " +
             "fotos era igualmente simpático. :)" +
         "</div>" +
         "<br>" +
-        "<div>" +
-            "No futuro, poderás também enviar as tuas fotos via um botão aqui no site!" +
+        "<div class='question'>" +
+            "Mas espera lá? Quantas pessoas estão envolvidas nisto? Não era só o Tó?" +
         "</div>" +
         "<br>" +
+        "<div>" +
+            "<p>Se leste com atenção o ponto 1 perceberás que o sejaondefor.com é uma espécie de expositor" +
+            "ou mostruário das colagens do <a href='https://www.instagram.com/to.colante/'>to.colante</a>." +
+            "Mas esta esta página e esta FAQ que estás a ler não se fariam sem a preciosa ajuda de dois " +
+            "'compagnons de route': Pedro Campos, um benfiquista hiper praticante baseado em Berlim e o" +
+            "nosso carola da geolocalização - é graças a ele que ao postar uma foto no instagram a mesma aparece" +
+            "com exactidão (vá, pode haver um erro de metros...) no mapa de acordo com a localização mencionada." +
+            "De Estrasbrugo tivemos uns pequenos conselhos a nível de artwork pelo Márcio Barcelos - que se " +
+            "auto-designa de benfiquista não praticante (fica aqui o desígnio público de que um dia vamos " +
+            "conseguir arrastar-te a um estádio :)</p>" +
+            "<p>Mas não podemos deixar de mencionar todos aqueles que nos ajudaram a espalhar a Mística " +
+            "(entenda-se 'stickers') numa primeira fase - é passar no Manelito e pagar-lhes as cervejas" +
+            "que acima referi :)</p>" +
+            "<p>E finalmente e talvez mais importante, esta autêntica celebração ecuménica que aqui assistimos" +
+            "não seria feita, sem a ajuda de todos aqueles que disponibilizam e enviam as fotos que aqui" +
+            "vêm (que recordo poderão ser enviadas via mensagem em " +
+            "<a href='https://www.instagram.com/to.colante/'>to.colante</a> " +
+            "ou via <a href=3D'mailto:info.tocolante@gmail.com'>info.tocolante@gmail.com</a>)." +
+            "Todos eles levam o Benfica com eles (com ou sem stickers). Há uma passagem de um cântico " +
+            "(com uma belíssima letra de Amadeu Diniz da Fonseca) que expressa perfeitamente este " +
+            "sentimento: <a href='https://youtu.be/LCzUMsylXV4'>'Benfica o teu nome leva o " +
+            "vento, ao Mundo o nosso ideal'</a> . Não diria melhor. " +
+            " Se não fossem eles, este autêntico onda vermelho não estaria a chegar aos " +
+            "quatros cantos do mundo. A todos o nosso obrigado.</p>" +
+        "</div>" +
         "<div class='question'>" +
             "Existe mesmo um Tó?</div>" +
         "<br>" +

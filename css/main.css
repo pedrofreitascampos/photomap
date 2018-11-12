@@ -6,12 +6,12 @@ body {
 @font-face {
     font-family: 'hardcore';
     src:
-            url('../assets/fonts/hardcore_pen_regular.ttf');
+            url('../assets/fonts/Bohemian Typewriter.ttf');
             format('truetype');
 }
 
 .question {
-    font-size: 250%;
+    font-size: 200%;
     font-family: hardcore;
 }
 
