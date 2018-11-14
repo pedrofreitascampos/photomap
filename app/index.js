@@ -1,6 +1,5 @@
 // Requires that leaflet and leaflet.instagram are loaded on global "L"
-
-faq_html =
+var faq_html =
     "<div id='faq' style='overflow-y:scroll' onclick=unShowFaq()>" +
         "<br><br>" +
         "<div class='question'>" +
