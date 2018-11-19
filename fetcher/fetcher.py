@@ -19,12 +19,6 @@ def create_db_connector(url):
     return client.tocolante
 
 
-def dump_db_to_json(db, filename):
-    dump = [doc for doc in db.find({})]
-    with open(filename, 'w') as f:
-        f.write(json.dumps(dump, default=json_util.default))
-
-
 def extract_bucket_name(bucket_url):
     return os.path.basename(os.path.normpath(bucket_url))
 
@@ -33,14 +27,15 @@ def extract_shortcode(link):
     return link.split('/')[-2]
 
 
-def upload_media_to_s3(filename, bucket_name):
+def upload_db_to_s3(db, bucket_name):
     try:
+        filename = 'metadata/to.colante.json'
         s3 = boto3.resource('s3')
-        timestamp = int(time.time())
-        key = f'metadata/to.colante.json_{timestamp}'
-        with open(filename, 'rb') as f:
-            s3.Object(bucket_name, key).put(Body=f)
-            logging.debug(f'Writing({filename}) to {bucket_name}')
+        s3.Object(bucket_name, f'{filename}_{int(time.time())}').copy_from(
+            CopySource=f'{bucket_name}/{filename}')
+        s3.Object(bucket_name, filename).put(
+            Body=json.dumps(list(db.media.find({})), default=json_util.default))
+        logging.debug(f'Writing({filename}) to {bucket_name}')
     except Exception as e:
         logging.error(e)
 
@@ -115,9 +110,11 @@ def refresh_db(db, bucket_url, instagram_url):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Instagram media fetcher')
-    parser.add_argument('--config', '-c', help='Config file to use', dest='config', type=str, default='fetcher.ini')
-    parser.add_argument('--backup', '-b', help='Whether to backup metadata JSONs',
-                        dest='backup', type=bool, default=True)
+    parser.add_argument('--config', '-c',
+                        help='Config file to use',
+                        dest='config',
+                        type=str,
+                        default='fetcher.ini')
     args = parser.parse_args()
 
     config = configparser.ConfigParser()
@@ -125,10 +122,7 @@ if __name__ == '__main__':
 
     bucket_url = config['S3']['bucket_url']
     instagram_url = f'{config["INSTAGRAM"]["URL"]}?access_token={config["INSTAGRAM"]["access_token"]}'
-    metadata_filename = config['FILE']['path']
 
     db = create_db_connector(config['DB']['url'])
     refresh_db(db, bucket_url, instagram_url)
-    if args.backup:
-        upload_media_to_s3(metadata_filename, extract_bucket_name(bucket_url))
-    dump_db_to_json(db.media, metadata_filename)
+    upload_db_to_s3(db, extract_bucket_name(bucket_url))
