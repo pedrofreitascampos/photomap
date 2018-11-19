@@ -172,7 +172,7 @@ var mymap = L.map('mapid').setView([38.752678, -9.184681], 3);
 mymap.options.maxBounds = L.latLngBounds(L.latLng(-90, -180), L.latLng(90, 180));
 mymap.options.maxBoundsViscosity = 1.0;
 retrieveToken('access-token-mapbox.txt', load_map_tiles);
-L.instagram('../assets/db/to.colante.json').addTo(mymap);
+L.instagram('https://s3.eu-central-1.amazonaws.com/stickermap-media/metadata/to.colante.json').addTo(mymap);
 
 mymap.on('zoomend', function(){
     mymap.eachLayer(function (layer){
