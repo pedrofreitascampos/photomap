@@ -108,15 +108,15 @@ def refresh_db(db, bucket_url, instagram_url):
             db.media.insert_one(new_entry)
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description='Instagram media fetcher')
     parser.add_argument('--config', '-c',
                         help='Config file to use',
                         dest='config',
                         type=str,
                         default='fetcher.ini')
-    args = parser.parse_args()
 
+    args = parser.parse_args()
     config = configparser.ConfigParser()
     config.read(args.config)
 
@@ -126,3 +126,7 @@ if __name__ == '__main__':
     db = create_db_connector(config['DB']['url'])
     refresh_db(db, bucket_url, instagram_url)
     upload_db_to_s3(db, extract_bucket_name(bucket_url))
+
+
+if __name__ == '__main__':
+    main()
