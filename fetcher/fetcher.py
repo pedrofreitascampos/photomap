@@ -30,7 +30,7 @@ def extract_shortcode(link):
 def upload_db_to_s3(db, bucket_name):
     try:
         filename = 'metadata/to.colante.json'
-        s3 = boto3.resource('s3')
+        s3 = boto3.resource('s3', region_name='eu-central-1')
         s3.Object(bucket_name, f'{filename}_{int(time.time())}').copy_from(
             CopySource=f'{bucket_name}/{filename}')
         s3.Object(bucket_name, filename).put(
@@ -42,13 +42,14 @@ def upload_db_to_s3(db, bucket_name):
 
 def upload_remote_media_to_s3(url, bucket_name, shortcode):
     try:
-        s3 = boto3.resource('s3')
-        key = url.split('/')[-1]
+        s3 = boto3.resource('s3', region_name='eu-central-1')
         file_object = urllib.request.urlopen(url)  # 'Like' a file object
         fp = io.BytesIO(file_object.read())  # Wrap object
+        key = url.split('/')[-1].split('.jpg')[0] + '.jpg'
         s3.Object(bucket_name, key).put(Body=fp, Metadata={'shortcode': shortcode})
         logging.debug(f'Writing({url}) to {bucket_name}')
     except Exception as e:
+        print(e)
         logging.error(e)
 
 
@@ -108,7 +109,7 @@ def refresh_db(db, bucket_url, instagram_url):
             db.media.insert_one(new_entry)
 
 
-def main():
+def main(*arg, **kwargs):
     parser = argparse.ArgumentParser(description='Instagram media fetcher')
     parser.add_argument('--config', '-c',
                         help='Config file to use',
