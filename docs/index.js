@@ -53,8 +53,29 @@ function toggleThemePicker() {
 // Close picker when clicking the map
 map.on('click', () => document.getElementById('theme-options').classList.remove('open'));
 
+// ── Marker sizing ────────────────────────────────────────────
+function markerSize() {
+  const z = map.getZoom();
+  if (z <= 3)  return 14;
+  if (z <= 5)  return 20;
+  if (z <= 7)  return 26;
+  if (z <= 10) return 32;
+  return 40;
+}
+
+function makeIcon(thumb, size) {
+  return L.divIcon({
+    className: 'photo-marker',
+    html: `<img src="${thumb}" alt="" loading="lazy">`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+    popupAnchor: [0, -size / 2 - 2]
+  });
+}
+
 // ── Markers ─────────────────────────────────────────────────
 const cluster = L.markerClusterGroup({ maxClusterRadius: 40 });
+const allMarkers = [];
 
 fetch('data.json')
   .then(r => r.json())
@@ -62,20 +83,12 @@ fetch('data.json')
     posts.forEach(post => {
       if (!post.lat || !post.lng) return;
 
-      const icon = L.divIcon({
-        className: 'photo-marker',
-        html: `<img src="${post.thumb}" alt="" loading="lazy">`,
-        iconSize: [32, 32],
-        iconAnchor: [16, 16],
-        popupAnchor: [0, -18]
-      });
-
       const instaUrl = `https://www.instagram.com/p/${post.shortcode}/`;
       const caption = post.caption
         ? `<p class="popup-caption">${post.caption}</p>`
         : '';
 
-      const marker = L.marker([post.lat, post.lng], { icon });
+      const marker = L.marker([post.lat, post.lng], { icon: makeIcon(post.thumb, markerSize()) });
       marker.bindPopup(`
         <a href="${instaUrl}" target="_blank" rel="noopener">
           <img class="popup-img" src="${post.thumb}" alt="">
@@ -87,12 +100,19 @@ fetch('data.json')
         </div>
       `);
 
+      marker._thumb = post.thumb;
+      allMarkers.push(marker);
       cluster.addLayer(marker);
     });
 
     map.addLayer(cluster);
   })
   .catch(err => console.error('Failed to load data.json:', err));
+
+map.on('zoomend', () => {
+  const size = markerSize();
+  allMarkers.forEach(m => m.setIcon(makeIcon(m._thumb, size)));
+});
 
 // ── FAQ ──────────────────────────────────────────────────────
 function openFaq()  { document.getElementById('faq-overlay').classList.add('open'); }
