@@ -65,9 +65,9 @@ fetch('data.json')
       const icon = L.divIcon({
         className: 'photo-marker',
         html: `<img src="${post.thumb}" alt="" loading="lazy">`,
-        iconSize: [50, 50],
-        iconAnchor: [25, 25],
-        popupAnchor: [0, -30]
+        iconSize: [32, 32],
+        iconAnchor: [16, 16],
+        popupAnchor: [0, -18]
       });
 
       const instaUrl = `https://www.instagram.com/p/${post.shortcode}/`;
