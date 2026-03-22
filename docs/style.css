@@ -106,7 +106,7 @@ body[data-theme="noite"] .leaflet-tile-pane {
 /* ── Photo markers ────────────────────────────────────────── */
 .photo-marker {
   border: 2px solid var(--marker-border);
-  border-radius: 3px;
+  border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.45);
   overflow: hidden;
   transition: transform .15s;
