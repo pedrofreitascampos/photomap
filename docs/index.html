@@ -10,12 +10,32 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-theme="luz">
   <div id="map"></div>
+
+  <!-- Theme picker -->
+  <div id="theme-picker">
+    <button id="theme-toggle" title="Mudar tema" onclick="toggleThemePicker()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+      </svg>
+    </button>
+    <div id="theme-options">
+      <button data-theme="luz"      onclick="setTheme('luz')">      <span class="swatch"></span><span class="label">Luz</span>       <span class="desc">Limpo &amp; moderno</span></button>
+      <button data-theme="noite"    onclick="setTheme('noite')">    <span class="swatch"></span><span class="label">Noite</span>     <span class="desc">Noite europeia</span></button>
+      <button data-theme="glorioso" onclick="setTheme('glorioso')"> <span class="swatch"></span><span class="label">Glorioso</span>  <span class="desc">Clássico Benfica</span></button>
+      <button data-theme="classico" onclick="setTheme('classico')"> <span class="swatch"></span><span class="label">Clássico</span>  <span class="desc">Preto &amp; branco</span></button>
+      <button data-theme="ultras"   onclick="setTheme('ultras')">   <span class="swatch"></span><span class="label">Ultras</span>    <span class="desc">Máximo contraste</span></button>
+    </div>
+  </div>
+
+  <!-- FAQ button -->
   <div id="faq-btn" onclick="openFaq()"></div>
 
+  <!-- FAQ overlay -->
   <div id="faq-overlay" onclick="closeFaq()">
     <div id="faq" onclick="event.stopPropagation()">
+      <button class="faq-close" onclick="closeFaq()">✕</button>
       <div class="question">O que é o <a href="http://www.sejaondefor.com">sejaondefor.com</a>?</div>
       <p>O <a href="http://www.sejaondefor.com">sejaondefor.com</a> é o mostruário do
         <a href="https://www.instagram.com/to.colante/">to.colante</a> fornecendo a localização em
@@ -45,7 +65,7 @@
       <p>Se leste com atenção o ponto 1 perceberás que o sejaondefor.com é uma espécie de expositor
         das colagens do <a href="https://www.instagram.com/to.colante/">to.colante</a>.
         Mas esta página não se faria sem a preciosa ajuda de dois 'compagnons de route':
-        Pedro Campos, um benfiquista hiper praticante baseado em Berlim e o nosso carola da geolocalização.</p>
+        Pedro Campos, um benfiquista hiper praticante e o nosso carola da geolocalização.</p>
       <p>Não podemos deixar de mencionar todos aqueles que nos ajudaram a espalhar a Mística,
         e todos que disponibilizam e enviam as fotos. Todos eles levam o Benfica com eles.
         <a href="https://youtu.be/LCzUMsylXV4">'Benfica o teu nome leva o vento, ao Mundo o nosso ideal'</a>.</p>
