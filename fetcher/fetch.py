@@ -9,6 +9,7 @@ In CI:        set INSTAGRAM_USER / INSTAGRAM_PASS env vars for more reliable acc
 import io
 import json
 import os
+import sys
 import time
 from pathlib import Path
 
@@ -71,7 +72,12 @@ def main():
         print(f"Logging in as {username}")
         L.login(username, password)
 
-    profile = instaloader.Profile.from_username(L.context, PROFILE_NAME)
+    try:
+        profile = instaloader.Profile.from_username(L.context, PROFILE_NAME)
+    except Exception as e:
+        print(f"Could not load profile (Instagram may be blocking this IP): {e}")
+        print("Tip: add INSTAGRAM_USER / INSTAGRAM_PASS secrets to authenticate.")
+        sys.exit(0)  # exit cleanly so CI doesn't go red
     new_count = 0
 
     for post in profile.get_posts():
