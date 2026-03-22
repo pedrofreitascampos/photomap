@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "shortcode": "sample",
+    "lat": 38.7223,
+    "lng": -9.1393,
+    "caption": "Lisboa, sempre! 🦅",
+    "date": "2024-06-01",
+    "thumb": "thumbs/sample.jpg"
+  },
+  {
+    "shortcode": "sample2",
+    "lat": 52.5200,
+    "lng": 13.4050,
+    "caption": "Berlim sabe! 🔴",
+    "date": "2024-03-15",
+    "thumb": "thumbs/sample.jpg"
+  },
+  {
+    "shortcode": "sample3",
+    "lat": 40.7128,
+    "lng": -74.0060,
+    "caption": "New York representa 🦅",
+    "date": "2023-11-20",
+    "thumb": "thumbs/sample.jpg"
+  },
+  {
+    "shortcode": "sample4",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "caption": "Paris é nossa também",
+    "date": "2023-08-10",
+    "thumb": "thumbs/sample.jpg"
+  },
+  {
+    "shortcode": "sample5",
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "caption": "Tóquio! Até aqui chegámos 🔴⚪",
+    "date": "2023-05-02",
+    "thumb": "thumbs/sample.jpg"
+  }
+]
