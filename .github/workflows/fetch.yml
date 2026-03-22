@@ -1,0 +1,36 @@
+name: Fetch Instagram Posts
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # daily at 8am UTC
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install instaloader Pillow requests
+
+      - name: Fetch new posts
+        env:
+          INSTAGRAM_USER: ${{ secrets.INSTAGRAM_USER }}
+          INSTAGRAM_PASS: ${{ secrets.INSTAGRAM_PASS }}
+        run: python fetcher/fetch.py
+
+      - name: Commit new data (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json docs/thumbs/
+          git diff --staged --quiet || git commit -m "chore: fetch new instagram posts [skip ci]"
+          git push

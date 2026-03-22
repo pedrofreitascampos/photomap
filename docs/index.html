@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benfica Sticker Map</title>
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+  <div id="faq-btn" onclick="openFaq()"></div>
+
+  <div id="faq-overlay" onclick="closeFaq()">
+    <div id="faq" onclick="event.stopPropagation()">
+      <div class="question">O que é o <a href="http://www.sejaondefor.com">sejaondefor.com</a>?</div>
+      <p>O <a href="http://www.sejaondefor.com">sejaondefor.com</a> é o mostruário do
+        <a href="https://www.instagram.com/to.colante/">to.colante</a> fornecendo a localização em
+        mapa dos inúmeros to.colantes que têm vindo a ser espalhados desde 2015.</p>
+
+      <div class="question">Já agora o que é o to.colante?</div>
+      <p>O Benfica nasceu em Lisboa e desde sempre esteve aberto ao mundo.
+        Partindo desta premissa, o to.colante nasce do amor incondicional pelo
+        Sport Lisboa e Benfica procurando e tendo o intuito de espalhar mística.</p>
+      <p>Partindo de uma lógica DIY (do it yourself), desde 2015 têm vindo a ser criados
+        inúmeros stickers — os autodenominados to.colantes, usando uma linguagem visual mista,
+        diversa mas acima de tudo positiva, de acordo com a história e valores do clube.</p>
+
+      <div class="question">Ok ok...onde posso arranjar to.colantes?</div>
+      <p>De certeza que não os encontrarás numa loja. Mas na Luz, em dia de jogo, com certeza irás
+        encontrar alguém com to.colantes junto ao Manelito (roulote em Alto dos Moinhos).
+        Podes também entrar em contacto via mensagem
+        (<a href="https://www.instagram.com/to.colante/">instagram</a> ou
+        <a href="mailto:info.tocolante@gmail.com">info.tocolante@gmail.com</a>).</p>
+
+      <div class="question">Como posso ter to.colantes publicados aqui?</div>
+      <p>Conhecer o tipo que gere isto ou enviar as fotos para
+        <a href="mailto:info.tocolante@gmail.com">info.tocolante@gmail.com</a>.
+        Desde que enquadradas na temática, todas as imagens são bem vindas. Indicar a localização é igualmente simpático. :)</p>
+
+      <div class="question">Quantas pessoas estão envolvidas nisto?</div>
+      <p>Se leste com atenção o ponto 1 perceberás que o sejaondefor.com é uma espécie de expositor
+        das colagens do <a href="https://www.instagram.com/to.colante/">to.colante</a>.
+        Mas esta página não se faria sem a preciosa ajuda de dois 'compagnons de route':
+        Pedro Campos, um benfiquista hiper praticante baseado em Berlim e o nosso carola da geolocalização.</p>
+      <p>Não podemos deixar de mencionar todos aqueles que nos ajudaram a espalhar a Mística,
+        e todos que disponibilizam e enviam as fotos. Todos eles levam o Benfica com eles.
+        <a href="https://youtu.be/LCzUMsylXV4">'Benfica o teu nome leva o vento, ao Mundo o nosso ideal'</a>.</p>
+
+      <div class="question">Existe mesmo um Tó?</div>
+      <p>Sim e com o nome completo António José Conceição Oliveira — mais conhecido por Toni.
+        E para quem escreve estas linhas, é um dos Senhores Benfica. Mística no seu estado mais puro.</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

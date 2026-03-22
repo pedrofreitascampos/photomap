@@ -1,0 +1,128 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #map {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'hardcore';
+  src: url('assets/fonts/Bohemian Typewriter.ttf') format('truetype');
+}
+
+/* FAQ button */
+#faq-btn {
+  background-image: url('assets/img/tocolante.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  bottom: 1.5%;
+  left: 1.5%;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+#faq-btn:hover {
+  border-color: red;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* FAQ overlay */
+#faq-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  background: rgba(0,0,0,0.3);
+}
+
+#faq-overlay.open {
+  display: block;
+}
+
+#faq {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  width: min(60%, 640px);
+  max-height: 80%;
+  overflow-y: auto;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  padding: 20px 24px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #111;
+  line-height: 1.5;
+}
+
+#faq .question {
+  font-family: 'hardcore', Arial, sans-serif;
+  font-size: 1.4em;
+  margin: 1.2em 0 0.4em;
+}
+
+#faq p { margin-bottom: 0.8em; }
+#faq a { color: #c00; }
+
+/* Photo markers */
+.photo-marker {
+  border: 2px solid white;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+.photo-marker img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Popup */
+.leaflet-popup-content {
+  margin: 8px 10px;
+  text-align: center;
+}
+
+.popup-img {
+  max-width: 220px;
+  max-height: 220px;
+  display: block;
+  margin: 0 auto 6px;
+  border-radius: 4px;
+}
+
+.popup-caption {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 4px;
+  max-width: 220px;
+}
+
+.popup-date {
+  font-size: 11px;
+  color: #999;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.popup-link {
+  font-size: 12px;
+  color: #c00;
+  text-decoration: none;
+}
+
+.popup-link:hover { text-decoration: underline; }
