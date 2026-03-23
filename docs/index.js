@@ -132,6 +132,18 @@ map.on('zoomend', () => {
 function openFaq()  { document.getElementById('faq-overlay').classList.add('open'); }
 function closeFaq() { document.getElementById('faq-overlay').classList.remove('open'); }
 
+// ── Event listeners (CSP-safe, no inline handlers) ───────────
+document.getElementById('theme-toggle').addEventListener('click', toggleThemePicker);
+
+document.querySelectorAll('#theme-options button').forEach(btn => {
+  btn.addEventListener('click', () => setTheme(btn.dataset.theme));
+});
+
+document.getElementById('faq-btn').addEventListener('click', openFaq);
+document.getElementById('faq-overlay').addEventListener('click', closeFaq);
+document.getElementById('faq').addEventListener('click', e => e.stopPropagation());
+document.querySelector('.faq-close').addEventListener('click', closeFaq);
+
 // ── Boot ─────────────────────────────────────────────────────
 const savedTheme = localStorage.getItem('theme') || 'aguia';
 setTheme(savedTheme);

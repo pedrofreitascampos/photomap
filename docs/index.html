@@ -18,28 +18,28 @@
 
   <!-- Theme picker -->
   <div id="theme-picker">
-    <button id="theme-toggle" title="Mudar tema" onclick="toggleThemePicker()">
+    <button id="theme-toggle" title="Mudar tema">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
       </svg>
     </button>
     <div id="theme-options">
-      <button data-theme="luz"      onclick="setTheme('luz')">      <span class="swatch"></span><span class="label">Luz</span>       <span class="desc">Limpo &amp; moderno</span></button>
-      <button data-theme="noite"    onclick="setTheme('noite')">    <span class="swatch"></span><span class="label">Noite</span>     <span class="desc">Noite europeia</span></button>
-      <button data-theme="glorioso" onclick="setTheme('glorioso')"> <span class="swatch"></span><span class="label">Glorioso</span>  <span class="desc">Clássico Benfica</span></button>
-      <button data-theme="classico" onclick="setTheme('classico')"> <span class="swatch"></span><span class="label">Clássico</span>  <span class="desc">Preto &amp; branco</span></button>
-      <button data-theme="ultras"   onclick="setTheme('ultras')">   <span class="swatch"></span><span class="label">Ultras</span>    <span class="desc">Fogo na bancada</span></button>
-      <button data-theme="aguia"    onclick="setTheme('aguia')">    <span class="swatch"></span><span class="label">Águia ✦</span>   <span class="desc">Experimental</span></button>
+      <button data-theme="luz">      <span class="swatch"></span><span class="label">Luz</span>       <span class="desc">Limpo &amp; moderno</span></button>
+      <button data-theme="noite">    <span class="swatch"></span><span class="label">Noite</span>     <span class="desc">Noite europeia</span></button>
+      <button data-theme="glorioso"> <span class="swatch"></span><span class="label">Glorioso</span>  <span class="desc">Clássico Benfica</span></button>
+      <button data-theme="classico"> <span class="swatch"></span><span class="label">Clássico</span>  <span class="desc">Preto &amp; branco</span></button>
+      <button data-theme="ultras">   <span class="swatch"></span><span class="label">Ultras</span>    <span class="desc">Fogo na bancada</span></button>
+      <button data-theme="aguia">    <span class="swatch"></span><span class="label">Águia ✦</span>   <span class="desc">Experimental</span></button>
     </div>
   </div>
 
   <!-- FAQ button -->
-  <div id="faq-btn" onclick="openFaq()"></div>
+  <div id="faq-btn"></div>
 
   <!-- FAQ overlay -->
-  <div id="faq-overlay" onclick="closeFaq()">
-    <div id="faq" onclick="event.stopPropagation()">
-      <button class="faq-close" onclick="closeFaq()">✕</button>
+  <div id="faq-overlay">
+    <div id="faq">
+      <button class="faq-close">✕</button>
       <div class="question">O que é o <a href="https://sejaondefor.com">sejaondefor.com</a>?</div>
       <p>O <a href="https://sejaondefor.com">sejaondefor.com</a> é o mostruário do
         <a href="https://www.instagram.com/to.colante/">to.colante</a> fornecendo a localização em
