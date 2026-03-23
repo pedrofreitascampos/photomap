@@ -114,6 +114,49 @@ body[data-theme="aguia"] .leaflet-tile-pane {
   filter: sepia(1) hue-rotate(315deg) saturate(4) brightness(0.55);
 }
 
+/* Ultras — map filter: boost contrast, faint red cast */
+body[data-theme="ultras"] .leaflet-tile-pane {
+  filter: contrast(1.3) brightness(0.75) saturate(0.3);
+}
+
+/* Ultras — flare glow on photo markers (flickering stadium flare) */
+body[data-theme="ultras"] .photo-marker {
+  animation: ultras-flare 1.8s ease-in-out infinite alternate;
+}
+@keyframes ultras-flare {
+  0%   { box-shadow: 0 0 6px 2px rgba(255,0,34,0.7), 0 0 20px 6px rgba(255,60,0,0.3); }
+  30%  { box-shadow: 0 0 10px 4px rgba(255,40,0,0.9), 0 0 30px 10px rgba(255,80,0,0.4), 0 0 50px 15px rgba(255,0,34,0.15); }
+  60%  { box-shadow: 0 0 5px 2px rgba(255,0,34,0.6), 0 0 15px 5px rgba(255,50,0,0.25); }
+  100% { box-shadow: 0 0 8px 3px rgba(255,20,0,0.8), 0 0 25px 8px rgba(255,70,0,0.35), 0 0 45px 12px rgba(255,0,34,0.1); }
+}
+
+/* Ultras — aggressive pulsing clusters */
+body[data-theme="ultras"] .marker-cluster {
+  animation: ultras-cluster-pulse 1.4s ease-in-out infinite;
+}
+@keyframes ultras-cluster-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,0,34,0.8); }
+  50%       { box-shadow: 0 0 0 10px rgba(255,0,34,0), 0 0 20px 4px rgba(255,60,0,0.3); }
+}
+
+/* Ultras — FAQ button flare glow */
+body[data-theme="ultras"] #faq-btn {
+  box-shadow: 0 0 12px rgba(255,0,34,0.7), 0 0 30px rgba(255,60,0,0.3);
+  border-color: #ff0022;
+}
+
+/* Ultras — swatch with glow */
+[data-theme="ultras"] .swatch, button[data-theme="ultras"] .swatch {
+  background: #0a0a0a;
+  border-color: #ff0022;
+  box-shadow: 0 0 6px rgba(255,0,34,0.8);
+}
+
+/* Ultras — popup with flare accent */
+body[data-theme="ultras"] .leaflet-popup-content-wrapper {
+  box-shadow: 0 0 15px rgba(255,0,34,0.4), 0 4px 12px rgba(0,0,0,0.6) !important;
+}
+
 /* Águia — SLB watermark (fixed on body, outside map's overflow:hidden) */
 #map-watermark {
   display: none;
@@ -343,7 +386,7 @@ button[data-theme="aguia"] .swatch {
 [data-theme="noite"]    .swatch, button[data-theme="noite"]    .swatch { background: #181820; }
 [data-theme="glorioso"] .swatch, button[data-theme="glorioso"] .swatch { background: linear-gradient(135deg,#b8002a,#c8a84b); }
 [data-theme="classico"] .swatch, button[data-theme="classico"] .swatch { background: linear-gradient(135deg,#fff 50%,#000 50%); }
-[data-theme="ultras"]   .swatch, button[data-theme="ultras"]   .swatch { background: #0a0a0a; border-color: #ff0022; }
+/* ultras swatch styled above with glow */
 
 .label { font-weight: 700; font-size: 13px; color: var(--text); }
 .desc  { font-size: 11px; color: var(--text-dim); margin-left: auto; padding-left: 4px; }
