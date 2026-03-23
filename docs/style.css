@@ -105,7 +105,7 @@ body[data-theme="aguia"] {
 
 /* ── Map background per theme (visible at edges / between tiles) ── */
 body[data-theme="ultras"]  .leaflet-container { background: #1a1a1a; }
-body[data-theme="aguia"]   .leaflet-container { background: #1a0008; }
+body[data-theme="aguia"]   .leaflet-container { background: #110000; }
 
 /* ── Map tile filter per theme ────────────────────────────── */
 body[data-theme="classico"] .leaflet-tile-pane {
