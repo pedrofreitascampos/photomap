@@ -77,6 +77,13 @@ function makeIcon(thumb, size) {
   });
 }
 
+// ── HTML sanitisation ────────────────────────────────────────
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
 // ── Markers ─────────────────────────────────────────────────
 const cluster = L.markerClusterGroup({ maxClusterRadius: 40 });
 const allMarkers = [];
@@ -87,24 +94,27 @@ fetch('data.json')
     posts.forEach(post => {
       if (!post.lat || !post.lng) return;
 
-      const instaUrl = `https://www.instagram.com/p/${post.shortcode}/`;
+      const shortcode = esc(post.shortcode);
+      const instaUrl = `https://www.instagram.com/p/${shortcode}/`;
       const caption = post.caption
-        ? `<p class="popup-caption">${post.caption}</p>`
+        ? `<p class="popup-caption">${esc(post.caption)}</p>`
         : '';
 
-      const marker = L.marker([post.lat, post.lng], { icon: makeIcon(post.thumb, markerSize()) });
+      const thumb = esc(post.thumb);
+      const date  = esc(post.date || '');
+      const marker = L.marker([post.lat, post.lng], { icon: makeIcon(thumb, markerSize()) });
       marker.bindPopup(`
-        <a href="${instaUrl}" target="_blank" rel="noopener">
-          <img class="popup-img" src="${post.thumb}" alt="">
+        <a href="${instaUrl}" target="_blank" rel="noopener noreferrer">
+          <img class="popup-img" src="${thumb}" alt="">
         </a>
         <div class="popup-body">
           ${caption}
-          <span class="popup-date">${post.date}</span>
-          <a class="popup-link" href="${instaUrl}" target="_blank" rel="noopener">ver no instagram ↗</a>
+          <span class="popup-date">${date}</span>
+          <a class="popup-link" href="${instaUrl}" target="_blank" rel="noopener noreferrer">ver no instagram ↗</a>
         </div>
       `);
 
-      marker._thumb = post.thumb;
+      marker._thumb = thumb;
       allMarkers.push(marker);
       cluster.addLayer(marker);
     });

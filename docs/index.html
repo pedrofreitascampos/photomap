@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Benfica Sticker Map</title>
   <link rel="icon" href="assets/img/favicon.ico">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' https://*.basemaps.cartocdn.com https://*.instagram.com https://instagram.com data:; connect-src 'self'; font-src 'self'; frame-ancestors 'none';">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="aguia">
@@ -38,8 +40,8 @@
   <div id="faq-overlay" onclick="closeFaq()">
     <div id="faq" onclick="event.stopPropagation()">
       <button class="faq-close" onclick="closeFaq()">✕</button>
-      <div class="question">O que é o <a href="http://www.sejaondefor.com">sejaondefor.com</a>?</div>
-      <p>O <a href="http://www.sejaondefor.com">sejaondefor.com</a> é o mostruário do
+      <div class="question">O que é o <a href="https://sejaondefor.com">sejaondefor.com</a>?</div>
+      <p>O <a href="https://sejaondefor.com">sejaondefor.com</a> é o mostruário do
         <a href="https://www.instagram.com/to.colante/">to.colante</a> fornecendo a localização em
         mapa dos inúmeros to.colantes que têm vindo a ser espalhados desde 2015.</p>
 
@@ -78,8 +80,8 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
   <script src="index.js"></script>
 </body>
 </html>
