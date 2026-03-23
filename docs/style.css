@@ -114,35 +114,32 @@ body[data-theme="aguia"] .leaflet-tile-pane {
   filter: sepia(1) hue-rotate(315deg) saturate(4) brightness(0.55);
 }
 
-/* Águia — SLB watermark */
-body[data-theme="aguia"] #map::after {
-  content: 'S.L. BENFICA';
-  position: absolute;
+/* Águia — SLB watermark (fixed on body, outside map's overflow:hidden) */
+#map-watermark {
+  display: none;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-20deg);
   font-family: 'hardcore', Arial, sans-serif;
   font-size: clamp(40px, 10vw, 120px);
-  color: rgba(255, 26, 51, 0.055);
+  color: rgba(255, 26, 51, 0.09);
   pointer-events: none;
-  z-index: 450;
+  z-index: 500;
   letter-spacing: 0.12em;
   white-space: nowrap;
   user-select: none;
 }
+body[data-theme="aguia"] #map-watermark { display: block; }
 
-/* Águia — pulsing clusters */
-body[data-theme="aguia"] .marker-cluster {
+/* Águia — pulsing clusters + markers */
+body[data-theme="aguia"] .marker-cluster,
+body[data-theme="aguia"] .photo-marker {
   animation: aguia-pulse 2.4s ease-in-out infinite;
 }
 @keyframes aguia-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 26, 51, 0.5); }
-  50%       { box-shadow: 0 0 0 10px rgba(255, 26, 51, 0); }
-}
-
-/* Águia — glowing markers */
-body[data-theme="aguia"] .photo-marker {
-  box-shadow: 0 0 0 2px #ff1a33, 0 0 12px rgba(255, 26, 51, 0.7);
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 26, 51, 0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(255, 26, 51, 0); }
 }
 
 /* Águia — FAQ button glow */
