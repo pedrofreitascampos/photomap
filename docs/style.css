@@ -103,6 +103,10 @@ body[data-theme="aguia"] {
   --cluster-lg: rgba(220,0,30,0.9);
 }
 
+/* ── Map background per theme (visible at edges / between tiles) ── */
+body[data-theme="ultras"]  .leaflet-container { background: #1a1a1a; }
+body[data-theme="aguia"]   .leaflet-container { background: #1a0008; }
+
 /* ── Map tile filter per theme ────────────────────────────── */
 body[data-theme="classico"] .leaflet-tile-pane {
   filter: grayscale(1) contrast(1.1);
