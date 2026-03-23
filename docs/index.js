@@ -123,7 +123,7 @@ function openFaq()  { document.getElementById('faq-overlay').classList.add('open
 function closeFaq() { document.getElementById('faq-overlay').classList.remove('open'); }
 
 // ── Boot ─────────────────────────────────────────────────────
-const savedTheme = localStorage.getItem('theme') || 'luz';
+const savedTheme = localStorage.getItem('theme') || 'aguia';
 setTheme(savedTheme);
 // mark saved theme active on load
 document.querySelectorAll('#theme-options button').forEach(btn => {
