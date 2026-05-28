@@ -1,3 +1,6 @@
+// ── Frame-buster (meta CSP frame-ancestors is ignored by browsers) ──
+if (window.top !== window.self) { window.top.location = window.location.href; }
+
 // ── Tile layers per theme ───────────────────────────────────
 const TILES = {
   luz: {
@@ -79,9 +82,9 @@ function makeIcon(thumb, size) {
 
 // ── HTML sanitisation ────────────────────────────────────────
 function esc(s) {
-  const d = document.createElement('div');
-  d.textContent = s;
-  return d.innerHTML;
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
 }
 
 // ── Markers ─────────────────────────────────────────────────

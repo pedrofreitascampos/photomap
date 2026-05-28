@@ -3,3 +3,13 @@
 *.pyc
 __pycache__/
 *.txt
+
+# secrets & sessions — never commit
+.env
+*.session
+session-*
+*.session.json
+.instaloader-session*
+
+# crash dumps
+*.stackdump
